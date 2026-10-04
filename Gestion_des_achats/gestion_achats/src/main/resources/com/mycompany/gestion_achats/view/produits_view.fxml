@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<SplitPane dividerPositions="0.5" orientation="HORIZONTAL"
+           xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1" 
+           fx:controller="com.mycompany.gestion_achats.controller.ProduitsController">
+    <items>
+       
+        
+        <VBox spacing="8" minWidth="0">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Produits : " style="-fx-font-weight: bold; -fx-font-size: 14;"/>
+<GridPane xmlns:fx="http://javafx.com" hgap="10.0" vgap="15.0" prefWidth="700.0" prefHeight="200.0">
+    <padding>
+        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+    </padding>
+    <children>
+
+       
+
+        
+        <TextField styleClass="lblRecherche" fx:id="txtRecherche" promptText="Rechercher par nom..."
+                   GridPane.columnIndex="0" GridPane.rowIndex="0" HBox.hgrow="ALWAYS"/>
+
+        <ComboBox fx:id="comboFiltreCategorie" promptText="Toutes les categories"
+                  GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+        <Button styleClass="btnRecherche" onAction="#rechercherProduit"
+                GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <graphic>
+                <ImageView fitHeight="20.0" fitWidth="20.65" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../icons/search.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+
+        <Button onAction="#actualiserTableau" styleClass="btnRefresh"
+                GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <graphic>
+                <ImageView fitHeight="20.0" fitWidth="20.65" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../icons/refresh.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        
+         <Button onAction="#ouvrirFormulairePparent" styleClass="btnAjouter" GridPane.columnIndex="2" GridPane.rowIndex="0">
+            <graphic>
+                <ImageView fitHeight="20.0" fitWidth="20.65" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../icons/ajouter.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+
+        
+        <Label fx:id="lblMessage" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="3"/>
+
+    </children>
+</GridPane>
+           
+            <TableView fx:id="tableProduits" VBox.vgrow="ALWAYS" styleClass="table-custom"> 
+                <columnResizePolicy>
+                </columnResizePolicy>
+                <columns>
+                    <TableColumn fx:id="colIdP" text="ID" prefWidth="60"/>
+                    <TableColumn fx:id="colNomP" text="Nom" prefWidth="150"/>
+                    <TableColumn fx:id="colCategorieP" text="Catégorie" prefWidth="150"/>
+                    <TableColumn fx:id="colActionP" text="Action" prefWidth="160" sortable="false"/>
+                </columns>
+            </TableView>
+        </VBox>
+
+        
+        <VBox spacing="8" minWidth="0">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <AnchorPane>
+                 
+             <HBox spacing="10">
+                    
+                <Label text="Categorie :" style="-fx-font-weight: bold; -fx-font-size: 14;"/>
+                <AnchorPane>
+                     <Button onAction="#ouvrirFormulaireCparent" styleClass="btnAjouter" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.65" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                <image>
+                                    <Image url="@../icons/ajouter.png" />
+                                </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                </AnchorPane>
+            </HBox>
+        </AnchorPane>
+
+
+            <TableView fx:id="TCategorie" VBox.vgrow="ALWAYS" styleClass="table-custom"> 
+                <columnResizePolicy>
+                </columnResizePolicy>
+                <columns>
+                    <TableColumn fx:id="colIdC" text="ID" prefWidth="60"/>
+                    <TableColumn fx:id="colNomC" text="Nom" prefWidth="200"/>
+                    <TableColumn fx:id="colActionC" text="Action" prefWidth="100"/>
+                </columns>
+            </TableView>
+        </VBox>
+
+    </items>
+</SplitPane>

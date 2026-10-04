@@ -1,0 +1,193 @@
+.lblTitre1{
+    -fx-text-fill:#131B2E;
+    -fx-font-weight: bold;
+}
+#lblTitreSide , #TitreLink{
+    -fx-text-fill:#544343;
+    -fx-font-family: "Plus Jakarta Sans SemiBold"; 
+    -fx-font-size: 16px;
+    -fx-padding-left:10px;
+}
+
+
+.sidebar .button {
+    -fx-pref-height: 50px;
+    -fx-font-family: "Plus Jakarta Sans Regular"; 
+    -fx-font-size: 16px;
+    -fx-text-fill:#544343;
+    -fx-background-color: transparent; 
+    -fx-border-color: transparent;
+    
+    }
+    
+.sidebar .button .graphic {
+    -fx-min-width: 30px;      
+    -fx-max-width: 30px;
+    -fx-alignment: center;    
+}
+    
+ .sidebar .button:hover {
+     
+    -fx-background-color: rgba(114, 28, 36, 0.2); 
+    -fx-text-fill:  #721c24; 
+}
+
+.sidebar-btn.active .image-view {
+    -fx-effect: dropshadow(three-pass-box, rgba(255,255,255,0.4), 0, 0, 0, 0);
+}
+
+.sidebar-btn.active {
+    -fx-background-color: #4A0E17; 
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+/*-----------Dashboard--------*/
+
+.carte-stat {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 6, 0, 0, 2);
+}
+.lblTitreC{
+    -fx-font-size: 12px;
+}
+.lblValeurC{
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+#monDeuxiemeChart .default-color0.chart-bar {
+    -fx-bar-fill: #4A0E17;
+}
+
+#chartFournisseurs .default-color0.chart-bar{
+    -fx-bar-fill: #515F74;
+}
+.default-color0.chart-legend-item-symbol {
+    -fx-background-color: #515F74, white;
+}
+
+#chartStatut .default-color0.chart-pie {
+    -fx-pie-color: #515F74;
+}
+#chartStatut .default-color0.chart-legend-item-symbol {
+    -fx-background-color: #515F74;
+}
+
+
+#chartStatut .default-color1.chart-pie {
+    -fx-pie-color: #131B2E;
+}
+#chartStatut .default-color1.chart-legend-item-symbol {
+    -fx-background-color: #131B2E;
+}
+
+
+#chartStatut .default-color2.chart-pie {
+    -fx-pie-color: #BA1A1A;
+}
+#chartStatut .default-color2.chart-legend-item-symbol {
+    -fx-background-color: #BA1A1A;
+}
+
+
+/*-----------Fournsiseur--------*/
+#InfoFournisseurP{
+    -fx-pref-width:500px;
+    -fx-border-background:#FAF8FF;
+    -fx-border-color: #FFFFFF;
+    -fx-border-radius: 15;
+    
+}
+.table-custom .column-header-background {
+    -fx-background-color: #EAEDFF; 
+    
+    -fx-background-radius: 10 10 0 0;
+}
+
+.table-view .table-row-cell {
+    -fx-cell-size: 40px;
+    -fx-padding: 5px 0px 5px 0px; 
+}
+.table-custom .column-header {
+    -fx-background-color: transparent;
+    -fx-size: 35px;
+}
+
+.table-custom .column-header .label {
+    -fx-text-fill:  #131B2E; 
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER-LEFT;
+}
+.table-view .table-row-cell:filled:selected .text {
+    -fx-fill: #1E293B;
+}
+.table-view .table-row-cell:filled:selected {
+    -fx-background-color: #E2E8F0; 
+    -fx-background-background-color: #E2E8F0;
+}
+
+.table-custom {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #FAF8FF;
+    -fx-border-width: 1;
+}
+#colActions.button{
+    -fx-text-fill:  #FFFFFF; 
+    -fx-background-color: #515F74;
+    -fx-opacity:0.5;
+}
+.btnAjout{
+    -fx-background-color:#515F74;
+}
+.btnModifier{
+    -fx-background-color:#515F74;
+}
+.btnSupprimer{
+    -fx-background-color:#000000;
+}
+
+/*-----------Recherche--------*/
+.lblRecherche{
+    -fx-pref-height:30px;
+    -fx-size: 12px;
+    -fx-border-radius: 10;
+}
+.btnRecherche{
+    -fx-pref-height:30px;
+    -fx-border-radius: 10;
+    -fx-background-color:#EAEDFF;
+}
+.btnRefresh{
+    -fx-pref-height:30px;
+    -fx-border-radius: 10;
+    -fx-background-color:#EAEDFF;
+}
+.btnAjouter{
+    -fx-pref-height:30px;
+    -fx-border-radius: 10;
+    -fx-background-color:#131B2E;
+}
+
+.btnEnregistrer{
+    -fx-text-fill:  #FFFFFF; 
+    -fx-pref-height:30px;
+    -fx-border-radius: 10;
+    -fx-background-color:#131B2E;
+}
+.btnAnnuler{
+    -fx-text-fill:  #FFFFFF; 
+    -fx-pref-height:30px;
+    -fx-border-radius: 10;
+    -fx-background-color:#BA1A1A;
+}
+
+
+
+
+

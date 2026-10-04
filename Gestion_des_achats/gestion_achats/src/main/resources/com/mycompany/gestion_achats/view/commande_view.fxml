@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gestion_achats.controller.CommandeController">
+    <padding>
+        <Insets bottom="15" left="15" right="15" top="15" />
+    </padding>
+
+    <HBox spacing="10">
+        <Button onAction="#ouvrirFormulaireAjout" styleClass="btnAjouter" text="Nouveau commande" textFill="WHITE">
+            <graphic>
+                <ImageView fitHeight="20.0" fitWidth="20.65" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <image>
+                        <Image url="@../icons/ajouter.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+    </HBox>
+    <GridPane hgap="10" vgap="8">
+        <Label text="Date debut :" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <DatePicker fx:id="dateDebut" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Au :" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <DatePicker fx:id="dateFin" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+
+        <Label text="Fournisseur :" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <ComboBox fx:id="comboFiltreFournisseur" promptText="Tous" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Statut :" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <ComboBox fx:id="comboFiltreStatut" promptText="Tous" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+        <Label text="Paiement :" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <ComboBox fx:id="comboFiltrePaiement" promptText="Tous" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Button onAction="#rechercherCommandes" styleClass="btnRecherche" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <graphic>
+                <ImageView fitHeight="20.0" fitWidth="20.65" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <image>
+                        <Image url="@../icons/search.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>  
+        <Button onAction="#reinitialiserFiltres" styleClass="btnRefresh" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <graphic>
+                <ImageView fitHeight="20.0" fitWidth="20.65" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                    <image>
+                        <Image url="@../icons/refresh.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>  
+
+    </GridPane>
+
+    <Label fx:id="lblMessage" />
+
+    <TableView fx:id="tableCommandes" styleClass="table-custom" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colNumCm" prefWidth="50" text="N°" />
+            <TableColumn fx:id="colDateCm" prefWidth="110" text="Date commande" />
+            <TableColumn fx:id="colDateLivraison" prefWidth="120" text="Livraison prevue" />
+            <TableColumn fx:id="colStatut" prefWidth="100" text="Statut" />
+            <TableColumn fx:id="colFournisseur" prefWidth="140" text="Fournisseur" />
+            <TableColumn fx:id="colMontantTotal" prefWidth="110" text="Montant total" />
+            <TableColumn fx:id="colPaiement" prefWidth="120" text="Paiement" />
+            <TableColumn fx:id="colActions" prefWidth="260" text="Actions" />
+        </columns>
+    </TableView>
+
+</VBox>

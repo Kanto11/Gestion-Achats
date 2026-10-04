@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.mycompany.gestion_achats.controller.DashboardController"
+      spacing="15">
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    
+  
+    <HBox spacing="15">
+        <VBox styleClass="carte-stat" alignment="CENTER" spacing="5" HBox.hgrow="ALWAYS">
+             <Label styleClass="lblTitreC" text="Fournisseurs" />
+            <HBox alignment="CENTER" spacing="8">
+                <ImageView fitWidth="27" fitHeight="27" preserveRatio="true">
+                    <image>
+                        <Image url="@../icons/fournisseur.png"/>
+                    </image>
+                </ImageView>
+                    <Label styleClass="lblValeurC" fx:id="lblTotalFournisseurs" />
+            </HBox>
+            
+        </VBox>
+        <VBox styleClass="carte-stat" alignment="CENTER" spacing="5" HBox.hgrow="ALWAYS">
+            <Label styleClass="lblTitreC" text="Produits" />
+            <HBox alignment="CENTER" spacing="8">
+                <ImageView fitWidth="27" fitHeight="27" preserveRatio="true">
+                    <image>
+                        <Image url="@../icons/produit.png"/>
+                    </image>
+                </ImageView>
+                <Label styleClass="lblValeurC" fx:id="lblTotalProduits" />
+            </HBox>
+            
+        </VBox>
+         <VBox styleClass="carte-stat" alignment="CENTER" spacing="5" HBox.hgrow="ALWAYS">
+           <Label styleClass="lblTitreC" text="Commandes"/>
+            <HBox alignment="CENTER" spacing="8">
+                <ImageView fitWidth="27" fitHeight="27" preserveRatio="true">
+                    <image>
+                        <Image url="@../icons/commande.png"/>
+                    </image>
+                </ImageView>
+                 <Label styleClass="lblValeurC" fx:id="lblTotalCommandes"/>
+            </HBox>
+            
+        </VBox>
+       
+        <VBox styleClass="carte-stat" alignment="CENTER" spacing="5" HBox.hgrow="ALWAYS">
+            <Label styleClass="lblTitreC" text="Total Achats" />
+            <Label styleClass="lblValeurC" fx:id="lblTotalAchats" />
+        </VBox>
+        <VBox styleClass="carte-stat" alignment="CENTER" spacing="5" HBox.hgrow="ALWAYS">
+            <Label styleClass="lblTitreC" text="Reste a payer" />
+            <Label styleClass="lblValeurC" fx:id="lblResteAPayer" style="-fx-text-fill: #c0392b;"/>
+        </VBox>
+    </HBox>
+
+   
+    <Label fx:id="lblAlerteRetard" style="-fx-font-weight: bold; -fx-text-fill: #c0392b;"/>
+
+ 
+    <GridPane hgap="15" vgap="15" VBox.vgrow="ALWAYS">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="50"/>
+            <ColumnConstraints percentWidth="50"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints vgrow="ALWAYS"/>
+            <RowConstraints vgrow="ALWAYS"/>
+        </rowConstraints>
+
+        <StackPane fx:id="conteneurChartStatut" GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="carte-stat"/>
+        <StackPane fx:id="conteneurChartMois" GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="carte-stat"/>
+        <StackPane fx:id="conteneurChartFournisseurs" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="carte-stat"/>
+        <StackPane fx:id="conteneurChartProduits" GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="carte-stat"/>
+
+    </GridPane>
+
+</VBox>

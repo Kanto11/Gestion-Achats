@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane prefHeight="800.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gestion_achats.controller.Main_Layout_Controller">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutY="6.0" prefHeight="800.0" prefWidth="1080.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.08), 10, 0, 5, 0);" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fitHeight="190.0" fitWidth="200" layoutX="25.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                    <Image url="@../image/logos.png" />
+                                    </image>
+                        </ImageView>
+                        
+                        <Label fx:id="lblTitreSide" layoutX="25.0" layoutY="100.0" text="NAVIGATION PRINCIPAL" />
+                        
+                        <VBox fx:id="menuLateral" focusTraversable="true" layoutY="139.0" prefHeight="432.0" prefWidth="275.0" spacing="10">
+                            
+                            <Button fx:id="btnDashboard" alignment="CENTER_LEFT" contentDisplay="LEFT" graphicTextGap="10" maxWidth="Infinity" onAction="#afficherDashboard" prefHeight="50.0" prefWidth="275.0" styleClass="sidebar-btn" text="Tableau de bords">
+                                <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.65" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                        <image>
+                                        <Image url="@../icons/fournisseur.png" />
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                                <VBox.margin>
+                                    <Insets top="5.0" />
+                                </VBox.margin>
+                                <padding>
+                                    <Insets left="25.0" />
+                                </padding>
+                            </Button>
+
+                                  
+                            <Button fx:id="btnFournisseurs" alignment="CENTER_LEFT" contentDisplay="LEFT" graphicTextGap="10" maxWidth="Infinity" onAction="#afficherFournisseurs" prefHeight="50.0" styleClass="sidebar-btn" text="Fournisseur">
+                                <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.65" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                        <image>
+                                            <Image url="@../icons/fournisseur.png" />
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                                <VBox.margin>
+                                    <Insets />
+                                </VBox.margin>
+                                <padding>
+                                    <Insets left="25.0" />
+                                </padding>
+                            </Button>
+
+                                 
+                            <Button fx:id="btnProduits" alignment="CENTER_LEFT" contentDisplay="LEFT" graphicTextGap="10" maxWidth="Infinity" onAction="#afficherProduits" prefHeight="50.0" styleClass="sidebar-btn" text="Produits">
+                                <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.65" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                        <image>
+                                            <Image url="@../icons/produit.png" />
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                                <VBox.margin>
+                                    <Insets />
+                                </VBox.margin>
+                                <padding>
+                                    <Insets left="25.0" />
+                                </padding>
+                            </Button>
+                           
+                                 
+                            <Button fx:id="btnCommandes" alignment="CENTER_LEFT" contentDisplay="LEFT" graphicTextGap="10" maxWidth="Infinity" minHeight="50.0" onAction="#afficherCommandes" prefHeight="50.0" prefWidth="263.0" styleClass="sidebar-btn" text="Commandes">
+                                <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.65" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                        <image>
+                                            <Image url="@../icons/commande.png" />
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                                <VBox.margin>
+                                    <Insets />
+                                </VBox.margin>
+                                <padding>
+                                    <Insets left="25.0" />
+                                </padding>
+                            </Button>
+                           
+                            <Button fx:id="btnEspaceFournisseur" alignment="CENTER_LEFT" contentDisplay="LEFT" graphicTextGap="10" maxWidth="Infinity" minHeight="50.0" onAction="#afficherEspaceFournisseur" prefHeight="50.0" prefWidth="263.0" styleClass="sidebar-btn" text="Espace Fournisseur">
+                                <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.65" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                        <image>
+                                            <Image url="@../icons/commande.png" />
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                                <VBox.margin>
+                                    <Insets />
+                                </VBox.margin>
+                                <padding>
+                                    <Insets left="25.0" />
+                                </padding>
+                            </Button>
+                            <styleClass>
+                              <String fx:value="sidebar" />
+                              <String fx:value="panel" />
+                           </styleClass>
+                        </VBox>
+                    </children>
+                  </AnchorPane>
+               </left>
+               <center>           
+                    <BorderPane>
+                         <top>
+                             <StackPane prefHeight="60.0" prefWidth="805.0" style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.08), 10, 0, 0, 5);">
+                                    <Label fx:id="TitreLink" styleClass="h2" StackPane.alignment="CENTER_LEFT" />
+                           <BorderPane.margin>
+                              <Insets />
+                           </BorderPane.margin>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                             </StackPane>
+                         </top>
+                         <center>
+                             <StackPane fx:id="zoneContenu">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></StackPane>
+                         </center>
+                    </BorderPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
